@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-
-    <PackageId>IdentityServer4.Storage</PackageId>
+      <Authors>Denys Skvortsov</Authors>
+    <PackageId>PRRO.Auth.Identity.Storage</PackageId>
     <Description>Storage interfaces and models for IdentityServer4</Description>
+    <Version>5.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>

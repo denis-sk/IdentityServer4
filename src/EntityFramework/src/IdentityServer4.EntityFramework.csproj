@@ -1,17 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <PackageId>IdentityServer4.EntityFramework</PackageId>
+    <PackageId>PRRO.Auth.Identity.EntityFramework</PackageId>
     <TargetFrameworks>net6.0</TargetFrameworks>
-
+      <Authors>Denys Skvortsov</Authors>
     <Description>EntityFramework persistence layer for IdentityServer4</Description>
     <Authors>Brock Allen;Dominick Baier;Scott Brady</Authors>
-    <AssemblyName>IdentityServer4.EntityFramework</AssemblyName>
+    <AssemblyName>PRRO.Auth.Identity.EntityFramework</AssemblyName>
     <PackageTags>OAuth2;OAuth 2.0;OpenID Connect;Security;Identity;IdentityServer;EntityFramework</PackageTags>
     <PackageIcon>icon.jpg</PackageIcon>
-    <PackageProjectUrl>https://github.com/IdentityServer/IdentityServer4</PackageProjectUrl>
+    <Version>5.0.0</Version>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageReleaseNotes>https://github.com/IdentityServer/IdentityServer4/releases</PackageReleaseNotes>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -33,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\EntityFramework.Storage\src\IdentityServer4.EntityFramework.Storage.csproj" />
-    <ProjectReference Include="..\..\IdentityServer4\src\IdentityServer4.csproj" />
+    <PackageReference Include="PRRO.Auth.Identity" Version="5.0.0" />
+    <PackageReference Include="PRRO.Auth.Identity.EntityFramework.Storage" Version="5.0.0" />
   </ItemGroup>
 </Project>

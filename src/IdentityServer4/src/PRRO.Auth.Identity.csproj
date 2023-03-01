@@ -1,15 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
   
   <PropertyGroup>
-    <PackageId>PRRO.Auth.Identity</PackageId>
+    <PackageId>PRRO.Auth.Identity.IdentityServer</PackageId>
     <TargetFramework>net6.0</TargetFramework>
     <Description>OpenID Connect and OAuth 2.0 Framework for ASP.NET Core</Description>
-      <Authors>Denys Skvortsov</Authors>
+    <Authors>Brock Allen;Dominick Baier</Authors>
     <AssemblyName>IdentityServer4</AssemblyName>
     <PackageTags>OAuth2;OAuth 2.0;OpenID Connect;Security;Identity;IdentityServer</PackageTags>
     <PackageIcon>icon.jpg</PackageIcon>
+    <PackageProjectUrl>https://github.com/IdentityServer/IdentityServer4</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Version>5.0.0</Version>
+    <PackageReleaseNotes>https://github.com/IdentityServer/IdentityServer4/releases</PackageReleaseNotes>
+
     <!-- Declare that the Repository URL can be published to NuSpec -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <!-- Embed source files that are not tracked by the source control manager to the PDB -->
@@ -43,6 +45,9 @@
 
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.27.0" />
-    <PackageReference Include="PRRO.Auth.Identity.Storage" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Storage\src\PRRO.Auth.Identity.Storage.csproj" />
   </ItemGroup>
 </Project>

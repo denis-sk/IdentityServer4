@@ -1,3 +1,52 @@
 <Project>
+ <PropertyGroup>	
+    <FrameworkVersion>6.0.14</FrameworkVersion>	
+    <ExtensionsVersion>6.0.0</ExtensionsVersion>	
+    <EntityFrameworkVersion>7.0.3</EntityFrameworkVersion>	
 
+    <IdentityServerVersion>5.0.0</IdentityServerVersion>	
+  </PropertyGroup>	
+
+  <ItemGroup>	
+    <!--build related-->	
+	
+
+    <!--tests -->	
+    <PackageReference Update="FluentAssertions" Version="5.10.2" />	
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="16.2.0" />	
+    <PackageReference Update="xunit" Version="2.4.1" />	
+    <PackageReference Update="xunit.runner.visualstudio" Version="2.4.1" PrivateAssets="All" />	
+
+    <!--our stuff -->	
+    <PackageReference Update="IdentityModel" Version="6.0.0" />	
+	
+
+    <!--microsoft extensions -->	
+    <PackageReference Update="Microsoft.Extensions.Caching.Memory" Version="$(ExtensionsVersion)" />	
+    <PackageReference Update="Microsoft.Extensions.Http" Version="$(ExtensionsVersion)" />	
+    <PackageReference Update="Microsoft.Extensions.Http.Polly" Version="$(ExtensionsVersion)" />	
+    <PackageReference Update="Microsoft.Extensions.Logging" Version="$(ExtensionsVersion)" />	
+    <PackageReference Update="Microsoft.Extensions.Logging.Console" Version="$(ExtensionsVersion)" />	
+    <PackageReference Update="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(ExtensionsVersion)" />	
+
+    <!--misc -->	
+    <PackageReference Update="Newtonsoft.Json" Version="13.0.2" />	
+    <PackageReference Update="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.27.0" />
+    <PackageReference Update="AutoMapper" Version="[12.0.0,13.0)" />	
+
+    <!--microsoft asp.net core -->	
+    <PackageReference Update="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="$(FrameworkVersion)" />	
+    <PackageReference Update="Microsoft.AspNetCore.TestHost" Version="$(FrameworkVersion)" />	
+    <PackageReference Update="Microsoft.AspNetCore.Identity" Version="$(FrameworkVersion)" />	
+    <PackageReference Update="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="$(FrameworkVersion)" />	
+    <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="$(FrameworkVersion)" />	
+    <PackageReference Update="Microsoft.AspNetCore.Authentication.Certificate" Version="$(FrameworkVersion)"/>	
+
+  </ItemGroup>	
+
+  <Target Name="SetAssemblyVersion" AfterTargets="MinVer">	
+    <PropertyGroup>	
+      <AssemblyVersion>$(MinVerMajor).$(MinVerMinor).$(MinVerPatch).0</AssemblyVersion>	
+    </PropertyGroup>	
+  </Target>
 </Project>
